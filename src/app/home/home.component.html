@@ -1,17 +1,18 @@
 <div class="test">
-  <p>home Component works!</p>
+<h3>Component Home</h3>
 
-  <h2> chào bạn {{ name }}</h2>
-  <input type="text" [(ngModel)]="age"/>
-  <br>
-  <h3>Tuổi bạn là {{ age }}</h3>
-  <!-- <h2 *ngIf="age > 18">bạn quá già rồi</h2>
-  <h2 *ngIf="age < 18">bạn còn trẻ lắm</h2> -->
-<div  *ngIf="age < 18; then tre; else gia"></div>
-
-  <ng-template #tre><h2>bạn quá già rồi</h2> </ng-template>
-  <ng-template #gia><h2>bạn còn trẻ lắm</h2></ng-template>
-
-  <button (click)="resetName()">Reset Tên</button>
-
+<table class="table">
+  <tr>
+    <th>STT</th>
+    <th>Tên</th>
+    <th>Giá</th>
+    <th>Hạ Giá</th>
+  </tr>
+  <tr *ngFor="let trai of fruit2; let i = index">
+    <td> {{ i + 1}}     </td>
+    <td> {{ trai.ten | uppercase}} </td>
+    <td> <span [ngClass]="{ 'negative' : trai.gia < 0 }">{{ trai.gia }}</span> </td>
+    <td> <span >{{ trai.haGia | onSalse | uppercase}}</span> </td>
+  </tr>
+</table>
 </div>

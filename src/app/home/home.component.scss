@@ -2,3 +2,13 @@
   border: 1px solid;
   background-color: aliceblue;
 }
+.table, td,th{
+  border-collapse: collapse;
+  border: 1px solid rgb(19, 11, 6)
+}
+td,th{
+  min-width: 100px;
+}
+.negative{
+  color: blue;
+}
