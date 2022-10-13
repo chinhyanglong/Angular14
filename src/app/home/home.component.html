@@ -1,4 +1,18 @@
 <div class="test">
-  <p>home Component works!</p>
+<h3>Component Home</h3>
 
+<table class="table">
+  <tr>
+    <th>STT</th>
+    <th>Tên</th>
+    <th>Giá</th>
+    <th>Hạ Giá</th>
+  </tr>
+  <tr *ngFor="let trai of fruit2; let i = index">
+    <td> {{ i + 1}}     </td>
+    <td> {{ trai.ten | uppercase}} </td>
+    <td> <span [ngClass]="{ 'negative' : trai.gia < 0 }">{{ trai.gia }}</span> </td>
+    <td> <span >{{ trai.haGia | onSalse | uppercase}}</span> </td>
+  </tr>
+</table>
 </div>
