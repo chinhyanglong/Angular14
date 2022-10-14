@@ -15,4 +15,18 @@
     <td> <span >{{ trai.haGia | onSalse | uppercase}}</span> </td>
   </tr>
 </table>
+Tỉnh / Thành PHố
+<select  id="city" (change)="changeCity($event)">
+  <option *ngFor="let data of cities" value="{{data.city}}"> 
+      {{data.city}}
+  </option>
+</select>
+<br>
+  Quận / Huyện
+  <select id="district" >
+    <option *ngFor="let district of districts" value="{{district}}"> 
+      {{district}}
+  </option>
+</select>
+
 </div>
